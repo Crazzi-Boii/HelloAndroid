@@ -1,18 +1,149 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.asitbehera.helloandroid.MainActivity">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
-    <TextView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@+id/udacityImg1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/udacity"
+        android:scaleType="fitXY"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/base"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/udacityImg1"
+        android:scaleType="fitXY"
+        />
+
+    <ImageView
+        android:id="@+id/locImg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:src="@drawable/ic_location_city_black_24dp"
+        android:layout_below="@+id/CompNam"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="25dp"
+        />
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id="@+id/CompNam"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/CompanyName"
+        android:layout_marginTop="50dp"
+        android:layout_toEndOf="@id/locImg"
+        android:layout_below="@id/udacityImg1"
+        android:textSize="60sp"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginLeft="10dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/add1"
+        android:text="@string/address1"
+        android:layout_marginTop="25dp"
+        android:layout_below="@id/CompNam"
+        android:layout_toEndOf="@id/locImg"
+        android:textStyle="bold"
+        android:textSize="50sp"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginLeft="10dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/add2"
+        android:textStyle="bold"
+        android:text="@string/address2"
+        android:layout_below="@id/add1"
+        android:layout_toEndOf="@id/locImg"
+        android:textSize="50sp"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginLeft="10dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/add3"
+        android:text="@string/address3"
+        android:layout_below="@id/add2"
+        android:textStyle="bold"
+        android:layout_toEndOf="@id/locImg"
+        android:textSize="50sp"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginLeft="10dp"
+        />
+
+    <ImageView
+        android:id="@+id/callImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_call_black_24dp"
+        android:layout_alignStart="@id/locImg"
+        android:layout_below="@id/add3"
+        android:layout_marginTop="25dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/celNo"
+        android:text="@string/cellNo"
+        android:layout_marginTop="40dp"
+        android:layout_below="@id/add3"
+        android:layout_toEndOf="@id/callImg"
+        android:textStyle="bold"
+        android:textSize="50sp"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginLeft="10dp"
+        />
+
+    <ImageView
+        android:id="@+id/domainImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_link_black_24dp"
+        android:layout_alignStart="@id/locImg"
+        android:layout_below="@id/callImg"
+        android:layout_marginTop="25dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/domainTxt"
+        android:text="@string/website"
+        android:layout_marginTop="65dp"
+        android:layout_below="@id/celNo"
+        android:layout_toEndOf="@id/domainImg"
+        android:textStyle="bold"
+        android:textSize="50sp"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginLeft="10dp"
+         />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="@string/punchLine"
+        android:textAlignment="center"
+        android:textColor="@color/UlogoColor"
+        android:background="@color/colorPrimary"
+        android:textSize="40sp"
+        />
+</RelativeLayout>
